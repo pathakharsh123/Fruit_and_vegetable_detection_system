@@ -28,15 +28,36 @@ if (app_mode == "Home"):
     st.image(img_path)
 elif (app_mode == "About Project"):
     st.header("About Project")
-    st.subheader("About Dataset")
-    st.text("This dataset contains images of the following food items:")
-    st.code("fruits - banana, apple, pear, grapes, orange, kiwi, watermelon, pomegranate, pineapple, mango.")
-    st.code("vegetables - cucumber, carrot, capsicum, onion, potato, lemon, tomato, raddish, beetroot, cabbage, lettuce, spinach, soy bean, cauliflower, bell pepper, chilli pepper, turnip, corn, sweetcorn, sweet potato, paprika, jalepeño, ginger, garlic, peas, eggplant.")
-    st.subheader("Content")
-    st.text("This dataset contains three folders:")
-    st.text("1. train (100 images each)")
-    st.text("2. validation (10 images each)")
-    st.text("3. test (10 images each)")
+
+    st.subheader("Overview")
+    st.markdown("""
+    The Fruits & Vegetables Detection System is a machine learning application designed to accurately identify various types of fruits and vegetables from images.This system offers a reliable solution for automating produce recognition tasks.
+    """)
+
+    st.subheader("Dataset")
+    st.markdown("""
+    **Dataset Source**: [Fruit and Vegetable Image Recognition Dataset](https://www.kaggle.com/username/fruits-vegetables-image-recognition)
+
+    The dataset contains images of the following food items:
+    
+    - **Fruits**: Banana, apple, pear, grapes, orange, kiwi, watermelon, pomegranate, pineapple, mango.
+    - **Vegetables**: Cucumber, carrot, capsicum, onion, potato, lemon, tomato, radish, beetroot, cabbage, lettuce, spinach, soybean, cauliflower, bell pepper, chili pepper, turnip, corn, sweetcorn, sweet potato, paprika, jalapeño, ginger, garlic, peas, eggplant.
+    """)
+
+    st.subheader("Dataset Details")
+    st.markdown("""
+    The dataset consists of three main folders:
+    
+    1. **Train**: Contains 100 images of each class for training the model.
+    2. **Validation**: Contains 10 images of each class for validation during model training.
+    3. **Test**: Contains 10 images of each class for evaluating the trained model's performance.
+    """)
+
+    st.subheader("Model and Application")
+    st.markdown("""
+    The system utilizes a convolutional neural network (CNN) architecture trained on TensorFlow and Keras. 
+    Additionally, a web application is developed using Streamlit, providing users with a simple interface to interact with the model and get predictions on uploaded images.
+    """)
 # Prediction
 elif (app_mode == "Prediction"):
     st.header("Model Prediction")
