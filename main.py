@@ -24,7 +24,7 @@ app_mode = st.sidebar.selectbox(
 
 if (app_mode == "Home"):
     st.header("FRUITS & VEGETABLES DETECTION SYSTEM")
-    img_path = "home_img.jpg"
+    img_path = "home.jpg"
     st.image(img_path)
 elif (app_mode == "About Project"):
     st.header("About Project")
